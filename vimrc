@@ -31,6 +31,7 @@ Plugin 'fs111/pydoc.vim'
 
 "Golang http://blog.gopheracademy.com/vimgo-development-environment/
 Plugin 'fatih/vim-go'
+Plugin 'jstemmer/gotags'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,6 +40,38 @@ filetype plugin indent on    " required
 
 "VUNDLE Modules config
 let g:airline#extensions#tabline#enabled = 1
+
+"Tagbar for GO
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+    \ }
+
+"END VUNDLE modules
+
 
 " supertab
 au FileType python set omnifunc=pythoncomplete#Complete
