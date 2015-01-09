@@ -39,7 +39,8 @@ filetype plugin indent on    " required
 "VUNDLE END
 
 "VUNDLE Modules config
-let g:airline#extensions#tabline#enabled = 1
+set t_Co=256
+let g:airline#extensions#tabline#enabled = 1 
 
 "Tagbar for GO
 let g:tagbar_type_go = {
@@ -114,7 +115,7 @@ set hidden            " Let us move between buffers without writing them.
 set softtabstop=4 " Vim sees 4 spaces as a tab
 set shiftwidth=4  " < and > uses spaces
 set expandtab     " Tabs mutate into spaces
-set foldmethod=indent " Default folding
+"set foldmethod=indent " Default folding http://vim.wikia.com/wiki/Folding
 set backspace=indent,eol,start  " Make backspace work like other editors.
 " set tabstop=4       " 4-space indents
 " set smarttab        " <TAB> width determined by shiftwidth instead of tabstop.  
