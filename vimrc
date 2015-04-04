@@ -73,7 +73,6 @@ let g:tagbar_type_go = {
 
 "END VUNDLE modules
 
-
 " supertab
 au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
@@ -89,6 +88,12 @@ let g:go_highlight_structs = 1
 "By default binaries are installed to $GOBIN or $GOPATH/bin. To change it:
 "let g:go_bin_path = expand("~/.gotools")
 "let g:go_bin_path = "/home/fatih/.mypath"  "or give absolute path
+
+"KEYS MAPPING"
+inoremap zjk <Esc>
+inoremap <C-c> <Esc>
+nmap <F8> :TagbarToggle<CR> 
+nmap <F2> :NERDTree<CR> 
 
 
 "STANDARD VIM SETTINGS
@@ -116,6 +121,7 @@ set softtabstop=4 " Vim sees 4 spaces as a tab
 set shiftwidth=4  " < and > uses spaces
 set expandtab     " Tabs mutate into spaces
 "set foldmethod=indent " Default folding http://vim.wikia.com/wiki/Folding
+set foldmethod=syntax
 set backspace=indent,eol,start  " Make backspace work like other editors.
 " set tabstop=4       " 4-space indents
 " set smarttab        " <TAB> width determined by shiftwidth instead of tabstop.  
