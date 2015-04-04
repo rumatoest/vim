@@ -93,8 +93,13 @@ let g:go_highlight_structs = 1
 inoremap zjk <Esc>
 inoremap <C-c> <Esc>
 nmap <F8> :TagbarToggle<CR> 
-nmap <F2> :NERDTree<CR> 
+nmap <F2> :NERDTreeToggle<CR> 
 
+"tab navigation
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-t>     <Esc>:tabnew<CR>
+nnoremap <S-h> gT
+nnoremap <S-l> gt
 
 "STANDARD VIM SETTINGS
 
